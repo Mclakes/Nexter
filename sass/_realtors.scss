@@ -1,0 +1,61 @@
+.realtors {
+    background-color: $color-secondary;
+
+    grid-column: col-start 7 / full-end;
+    padding: 0 3rem;
+
+    display:grid;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    grid-row-gap: 2rem;
+    grid-template-rows: min-content max-content;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-column: 1/-1;
+        padding: 4rem 3rem;
+    }
+
+
+    &__list {
+        // transform: translateY(20rem);
+        display: grid;
+        grid-template-columns: min-content max-content;
+        grid-column-gap: 2rem;
+        grid-row-gap: 5vh;
+        justify-content: center;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-template-columns: repeat(3, min-content max-content);
+            grid-column-gap: 3rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: min-content max-content;
+        }
+
+
+
+    }
+
+    &__img {
+        width: 8rem;
+        // height: 7rem;
+        border-radius: 50%;
+        display: block;
+    }
+
+    // &__details {
+    //     //lekan is a good boy
+    // }
+
+    &__sold{
+    text-transform: uppercase;
+    color: $color-grey-light-2;
+    margin: -3px;
+    }
+
+
+}
